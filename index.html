@@ -2217,8 +2217,19 @@
 
                     </div>
                     
-                    <div className="text-center text-slate-500 text-sm mt-12">
-                        © 2025 Marco Alulema Paredes. All rights reserved.
+                    <div className="flex flex-col items-center justify-center mt-12 pb-8 gap-4">
+                        {/* Contador de Visitas */}
+                        <div className="opacity-70 hover:opacity-100 transition-opacity" title="Total Visits">
+                            <img 
+                                src="https://hits.sh/marco-alulema-portfolio.vercel.app.svg?style=flat-square&label=VISITS&extraCount=500&color=0f172a&labelColor=2563eb" 
+                                alt="Visit Counter" 
+                            />
+                        </div>
+
+                        {/* Tu texto de Copyright original (MANTENIDO) */}
+                        <div className="text-center text-slate-500 text-sm">
+                            © 2025 Marco Alulema Paredes. {lang === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
+                        </div>
                     </div>
                     </div>
                 </section>
