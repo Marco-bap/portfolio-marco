@@ -1177,8 +1177,8 @@
             // Initial greeting based on language
             useEffect(() => {
                 const initialMsg = lang === 'es' 
-                    ? "¡Hola! Soy el asistente virtual de Marco. Pregúntame sobre su experiencia como Auditor Líder, proyectos o habilidades."
-                    : "Hi! I'm Marco's virtual assistant. Ask me about his ISO Lead Auditor experience, projects, or skills.";
+                    ? "¡Hola! Soy el asistente virtual de Marco. Estoy aquí para contarte sobre su experiencia en automatización, gestión de proyectos y su trayectoria internacional. ¿Qué te gustaría saber?"
+                    : "Hi! I'm Marco's virtual assistant. I'm here to tell you about his experience in automation, project management, and his global background. What would you like to know?";
                 
                 if (messages.length === 0) {
                     setMessages([{ role: 'model', text: initialMsg }]);
@@ -1799,26 +1799,26 @@
                         >
                             {t.hero.btn_contact}
                         </a>
-                        <div className="flex gap-2">
-                            <a 
-                                href={CONFIG.cvSpanish} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="px-6 py-3 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-blue-300 rounded-lg shadow-sm transition-all flex items-center gap-2"
-                            >
-                                <Download size={18} />
-                                <span>ES</span>
-                            </a>
-                            <a 
-                                href={CONFIG.cvEnglish} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="px-6 py-3 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-emerald-300 rounded-lg shadow-sm transition-all flex items-center gap-2"
-                            >
-                                <Download size={18} />
-                                <span>EN</span>
-                            </a>
-                        </div>
+                        <div className="flex flex-wrap gap-2">
+                        <a 
+                            href={CONFIG.cvSpanish} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="px-6 py-3 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-blue-300 rounded-lg shadow-sm transition-all flex items-center gap-2"
+                        >
+                            <Download size={18} />
+                            <span>{lang === 'es' ? 'CV Español' : 'CV Spanish'}</span>
+                        </a>
+                        <a 
+                            href={CONFIG.cvEnglish} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="px-6 py-3 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-emerald-300 rounded-lg shadow-sm transition-all flex items-center gap-2"
+                        >
+                            <Download size={18} />
+                            <span>{lang === 'es' ? 'CV Inglés' : 'CV English'}</span>
+                        </a>
+                    </div>
                         
                         <a 
                             href={CONFIG.linkedinProfile} 
